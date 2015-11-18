@@ -25,6 +25,7 @@ public class QuizLogic {
 	public void gameLoop() {
 		while(!isFinnished()){
 			increaseCounter();
+			//future logic
 		}
 	}
 

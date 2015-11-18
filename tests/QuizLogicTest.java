@@ -15,6 +15,7 @@ public class QuizLogicTest {
 
 	@After
 	public void tearDown() throws Exception {
+		
 	}
 
 	@Test
