@@ -27,5 +27,12 @@ public class QuizLogicTest {
 		sut.increaseCounter();
 		assertEquals(sut.getCounter(), 1);
 	}
+	
+	@Test
+	public void getCounter_ValueShouldBeZeroAfterCounterIsReset(){
+		sut.increaseCounter();
+		sut.resetCounter();
+		assertEquals(sut.getCounter(), 0);
+	}
 
 }
