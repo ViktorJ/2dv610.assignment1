@@ -18,4 +18,12 @@ public class QuizLogic {
 		counter = 0;
 	}
 
+	public boolean isFinnished() {
+		if(getCounter() == 10){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 }
