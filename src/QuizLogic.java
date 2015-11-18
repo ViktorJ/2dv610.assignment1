@@ -19,11 +19,7 @@ public class QuizLogic {
 	}
 
 	public boolean isFinnished() {
-		if(getCounter() == 10){
-			return true;
-		} else {
-			return false;
-		}
+		return getCounter() == 10;
 	}
 
 }
