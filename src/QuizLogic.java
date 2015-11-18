@@ -22,4 +22,10 @@ public class QuizLogic {
 		return getCounter() == 10;
 	}
 
+	public void gameLoop() {
+		while(!isFinnished()){
+			increaseCounter();
+		}
+	}
+
 }
