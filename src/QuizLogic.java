@@ -1,6 +1,10 @@
 
 public class QuizLogic {
 	private int counter;
+	
+	public QuizLogic(){
+		counter = 0;
+	}
 
 	public int getCounter() {
 		return counter;
