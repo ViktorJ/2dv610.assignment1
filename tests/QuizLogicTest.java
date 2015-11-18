@@ -42,5 +42,13 @@ public class QuizLogicTest {
 		}
 		assertTrue(sut.isFinnished());
 	}
+	
+	@Test
+	public void isFinished_ShouldReturnFalseWhenCounterIsNotTen(){
+		for(int i = 0; i < 5; i++){
+			sut.increaseCounter();
+		}
+		assertFalse(sut.isFinnished());
+	}
 
 }
