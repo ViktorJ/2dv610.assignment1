@@ -2,7 +2,7 @@
 public class QuizLogic {
 	private int counter;
 
-	public Object getCounter() {
+	public int getCounter() {
 		return counter;
 	}
 
