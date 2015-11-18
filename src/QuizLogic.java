@@ -1,8 +1,13 @@
 
 public class QuizLogic {
+	private int counter;
 
 	public Object getCounter() {
-		return 0;
+		return counter;
+	}
+
+	public void increaseCounter() {
+		counter++;
 	}
 
 }
