@@ -21,5 +21,11 @@ public class QuizLogicTest {
 	public void getCounter_returnCounterWithValueZero() {
 		assertEquals(sut.getCounter(), 0);
 	}
+	
+	@Test
+	public void getCounter_returnCounterWithIncreasedValue(){
+		sut.increaseCounter();
+		assertEquals(sut.getCounter(), 1);
+	}
 
 }
