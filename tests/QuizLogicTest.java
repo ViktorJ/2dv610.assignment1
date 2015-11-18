@@ -50,5 +50,11 @@ public class QuizLogicTest {
 		}
 		assertFalse(sut.isFinnished());
 	}
+	
+	@Test
+	public void gameLoop_ShouldLoopUntilCounterIsTen(){
+		sut.gameLoop();
+		assertEquals(sut.getCounter(), 10);
+	}
 
 }
