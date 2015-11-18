@@ -34,5 +34,13 @@ public class QuizLogicTest {
 		sut.resetCounter();
 		assertEquals(sut.getCounter(), 0);
 	}
+	
+	@Test
+	public void isFinnished_ShouldReturnTrueWhenCounterHasValueTen(){
+		for(int i = 0; i < 10; i++){
+			sut.increaseCounter();
+		}
+		assertTrue(sut.isFinnished());
+	}
 
 }
