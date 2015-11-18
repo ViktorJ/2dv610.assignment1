@@ -6,9 +6,11 @@ import org.junit.Test;
 
 
 public class QuizLogicTest {
+	private QuizLogic sut;
 
 	@Before
 	public void setUp() throws Exception {
+		sut = new QuizLogic();
 	}
 
 	@After
@@ -17,7 +19,6 @@ public class QuizLogicTest {
 
 	@Test
 	public void getCounter_returnCounterWithValueZero() {
-		QuizLogic sut = new QuizLogic();
 		assertEquals(sut.getCounter(), 0);
 	}
 
