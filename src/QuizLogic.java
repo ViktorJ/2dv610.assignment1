@@ -10,4 +10,8 @@ public class QuizLogic {
 		counter++;
 	}
 
+	public void resetCounter() {
+		counter = 0;
+	}
+
 }
