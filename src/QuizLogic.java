@@ -5,6 +5,7 @@ public class QuizLogic {
 	
 	public QuizLogic(){
 		counter = 0;
+		score = 0;
 	}
 
 	public int getCounter() {
