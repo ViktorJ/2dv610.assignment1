@@ -57,5 +57,10 @@ public class QuizLogicTest {
 		sut.gameLoop();
 		assertEquals(sut.getCounter(), 10);
 	}
+	
+	@Test
+	public void getScore_returnScoreWithValueZero(){
+		assertEquals(sut.getScore(), 0);
+	}
 
 }
