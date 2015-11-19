@@ -29,7 +29,7 @@ public class QuizLogic {
 		}
 	}
 
-	public Object getScore() {
+	public int getScore() {
 		return 0;
 	}
 
