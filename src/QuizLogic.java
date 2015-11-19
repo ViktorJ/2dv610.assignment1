@@ -1,6 +1,7 @@
 
 public class QuizLogic {
 	private int counter;
+	private int score;
 	
 	public QuizLogic(){
 		counter = 0;
@@ -30,7 +31,11 @@ public class QuizLogic {
 	}
 
 	public int getScore() {
-		return 0;
+		return score;
+	}
+
+	public void increaseScore() {
+		score++;
 	}
 
 }
