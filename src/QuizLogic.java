@@ -29,4 +29,8 @@ public class QuizLogic {
 		}
 	}
 
+	public Object getScore() {
+		return 0;
+	}
+
 }
