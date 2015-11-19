@@ -62,5 +62,10 @@ public class QuizLogicTest {
 	public void getScore_returnScoreWithValueZero(){
 		assertEquals(sut.getScore(), 0);
 	}
+	
+	@Test void getScore_returnScoreWithIncreasedValue(){
+		sut.increaseScore();
+		assertEquals(sut.getScore(), 1);
+	}
 
 }
