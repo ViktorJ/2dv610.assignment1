@@ -26,9 +26,9 @@ public class QuestionsTest {
 	*/
 	
 	@Test(expected = FileNotFoundException.class)
-	public void getQuestion_shouldThrowExceptionWhenNoFile(){
+	public void getQuestion_shouldThrowExceptionWhenNoFile() throws FileNotFoundException{
 		Questions sut = new Questions();
-		sut.getQuestion();	
+		sut.getQuestion("");	
 	}
 
 }
