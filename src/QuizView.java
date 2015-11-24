@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 public class QuizView {
 	
 	public static final String WELCOME = "Welcome to JavaQuiz!";
+	public static final String CATEGORY_OPTIONS = "What category of questions do you want? [1] Sport, [2] Movies";
 	
 	private PrintWriter console;
 
@@ -16,7 +17,7 @@ public class QuizView {
 	}
 
 	public void showOptions() {
-		console.println("What category of questions do you want? [1] Sport, [2] Movies");
+		console.println(CATEGORY_OPTIONS);
 	}
 
 }

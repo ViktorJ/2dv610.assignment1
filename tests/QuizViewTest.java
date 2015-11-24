@@ -31,7 +31,7 @@ public class QuizViewTest {
 	@Test
 	public void showOptions_printCategoryOptions(){
 		sut.showOptions();
-		verify(console).println("What category of questions do you want? [1] Sport, [2] Movies");
+		verify(console).println(QuizView.CATEGORY_OPTIONS);
 	}
 
 }
