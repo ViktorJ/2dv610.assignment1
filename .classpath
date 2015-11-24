@@ -6,5 +6,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="/Users/viktorjansson/Dropbox/Utbildning/mjukvarutestning/mockito-master.zip"/>
 	<classpathentry kind="lib" path="/Users/viktorjansson/Dropbox/Utbildning/mjukvarutestning/mockito-1.9.5/mockito-all-1.9.5.jar"/>
+	<classpathentry kind="lib" path="/Users/viktorjansson/Dropbox/Utbildning/mjukvarutestning/json-20150729.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
