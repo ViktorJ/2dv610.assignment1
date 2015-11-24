@@ -29,5 +29,11 @@ public class QuestionsTest {
 		String file = "sportquestions.json";
 		assertEquals(sut.getQuestion(file, 0), "What was Zlatan Ibrahimovic first proffesional club after Malmo FF?");	
 	}
+	
+	@Test
+	public void getCorrectAnswer_returnCorrectAnswerFromFirstQuestion(){
+		String file = "sportquestions.json";
+		assertEquals(sut.getCorrectAnswer(0), "Ajax");
+	}
 
 }
