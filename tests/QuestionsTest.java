@@ -38,13 +38,13 @@ public class QuestionsTest {
 	}
 	
 	@Test
-	public void getAnswersArray_returnArrayWithSizeFour(){
+	public void getAnswersArray_returnArrayWithSizeFour() throws FileNotFoundException{
 		assertEquals(sut.getAnswersArray(file, 0).length, 4);
 	}
 	
 	@Test
 	public void getAnswersArray_getCorrectAnswerToFirstQuestionFromAnswerArray() throws FileNotFoundException{
-		Array[] testArray = sut.getAnswersArray(file, 0);
+		String[] testArray = sut.getAnswersArray(file, 0);
 		Object correctAnswer = sut.getCorrectAnswer(file, 0);
 		
 		assertEquals(testArray[0], correctAnswer);

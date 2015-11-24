@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
 import java.util.Scanner;
 
 import org.json.*;
@@ -47,8 +46,20 @@ public class Questions {
 		return answer;
 	}
 
-	public Array[] getAnswersArray(String file, int number) {
-		Array[] answerArray = new Array[4];
+	public String[] getAnswersArray(String file, int number) throws FileNotFoundException {
+		String[] answerArray = new String[4];
+		
+		String questionsFromFile = getStringFromFile(file);
+		
+		JSONObject questions = new JSONObject(questionsFromFile);
+		JSONArray qArray = questions.getJSONArray("questions");
+		
+		answerArray[0] = qArray.getJSONObject(number).getString("correct");
+		
+		for(int i = 1; i <= 3; i++){
+			answerArray[i] = qArray.getJSONObject(number).getString("wrong" + i);
+		}
+		
 		return answerArray;
 	}
 
