@@ -8,9 +8,11 @@ import org.junit.Test;
 
 
 public class QuestionsTest {
+	private Questions sut;
 
 	@Before
 	public void setUp() throws Exception {
+		sut = new Questions();
 	}
 
 	@After
@@ -19,13 +21,11 @@ public class QuestionsTest {
 	
 	@Test(expected = FileNotFoundException.class)
 	public void getQuestion_shouldThrowExceptionWhenNoFile() throws FileNotFoundException{
-		Questions sut = new Questions();
 		sut.getQuestion("", 0);	
 	}
 	
 	@Test
 	public void getQuestion_getFirstQuestionFromJSONFile() throws FileNotFoundException{
-		Questions sut = new Questions();
 		String file = "sportquestions.json";
 		assertEquals(sut.getQuestion(file, 0), "What was Zlatan Ibrahimovic first proffesional club after Malmo FF?");	
 	}
