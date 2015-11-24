@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 import org.json.*;
@@ -44,6 +45,11 @@ public class Questions {
 		answer = qArray.getJSONObject(number).getString("correct");
 		
 		return answer;
+	}
+
+	public Array[] getAnswersArray(String file, int number) {
+		Array[] answerArray = new Array[4];
+		return answerArray;
 	}
 
 }
