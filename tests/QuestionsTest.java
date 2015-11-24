@@ -28,7 +28,14 @@ public class QuestionsTest {
 	@Test(expected = FileNotFoundException.class)
 	public void getQuestion_shouldThrowExceptionWhenNoFile() throws FileNotFoundException{
 		Questions sut = new Questions();
-		sut.getQuestion("");	
+		sut.getQuestion("", 0);	
+	}
+	
+	@Test
+	public void getQuestion_getFirstQuestionFromJSONFile() throws FileNotFoundException{
+		Questions sut = new Questions();
+		String file = "sportquestions.json";
+		assertEquals(sut.getQuestion(file, 0), "What was Zlatan Ibrahimovic first proffesional club after Malmo FF?");	
 	}
 
 }
