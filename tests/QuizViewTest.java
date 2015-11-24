@@ -33,5 +33,11 @@ public class QuizViewTest {
 		sut.showOptions();
 		verify(console).println(QuizView.CATEGORY_OPTIONS);
 	}
+	
+	@Test
+	public void showOptions_printQuizTypeOption(){
+		sut.showOptions();
+		verify(console).println("What type of quiz do you want? [1] No alternatives, [2] Multiple alternatives");
+	}
 
 }
