@@ -1,4 +1,4 @@
-{"sportquestions":[
+{"questions":[
     {"question":"What was Zlatan Ibrahimovic first proffesional club after Malmo FF?", "correct":"Ajax", "wrong1":"Milan", "wrong2":"Juventus", "wrong3":"Barcelona"},
     {"question":"What team won the Stanley Cup in 2015?", "correct":"Chicago", "wrong1":"Los Angeles", "wrong2":"New York", "wrong3":"Tampa"},
     {"question":"Which city are host of the olympic games 2016?", "correct":"Rio de Janeiro", "wrong1":"London", "wrong2":"Tokyo", "wrong3":"Athens"},

@@ -17,14 +17,6 @@ public class QuestionsTest {
 	public void tearDown() throws Exception {
 	}
 	
-	/*
-	@Test
-	public void getQuestion_returnFirstQuestionFromJSONFile() {
-		Questions sut = new Questions();
-		assertEquals(sut.getQuestion(0), "What was Zlatan Ibrahimovic first proffesional club after Malmo FF?");
-	}
-	*/
-	
 	@Test(expected = FileNotFoundException.class)
 	public void getQuestion_shouldThrowExceptionWhenNoFile() throws FileNotFoundException{
 		Questions sut = new Questions();
