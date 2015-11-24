@@ -10,10 +10,12 @@ import org.junit.Test;
 
 public class QuestionsTest {
 	private Questions sut;
+	private String file;
 
 	@Before
 	public void setUp() throws Exception {
 		sut = new Questions();
+		file = "sportquestions.json";
 	}
 
 	@After
@@ -27,21 +29,17 @@ public class QuestionsTest {
 	
 	@Test
 	public void getQuestion_getFirstQuestionFromJSONFile() throws FileNotFoundException{
-		String file = "sportquestions.json";
 		assertEquals(sut.getQuestion(file, 0), "What was Zlatan Ibrahimovic first proffesional club after Malmo FF?");	
 	}
 	
 	@Test
 	public void getCorrectAnswer_returnCorrectAnswerFromFirstQuestion() throws FileNotFoundException{
-		String file = "sportquestions.json";
 		assertEquals(sut.getCorrectAnswer(file, 0), "Ajax");
 	}
 	
 	@Test
 	public void getAnswersArray_returnArrayWithSizeFour(){
-		String file = "sportquestions.json";
-		Array[] testArray = sut.getAnswersArray(file, 0);
-		assertEquals(testArray.length, 4);
+		assertEquals(sut.getAnswersArray(file, 0).length, 4);
 	}
 
 }
