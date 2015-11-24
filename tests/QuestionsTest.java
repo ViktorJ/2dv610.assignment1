@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 
 import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 
 import org.junit.After;
 import org.junit.Before;
@@ -34,6 +35,13 @@ public class QuestionsTest {
 	public void getCorrectAnswer_returnCorrectAnswerFromFirstQuestion() throws FileNotFoundException{
 		String file = "sportquestions.json";
 		assertEquals(sut.getCorrectAnswer(file, 0), "Ajax");
+	}
+	
+	@Test
+	public void getAnswersArray_returnArrayWithSizeFour(){
+		String file = "sportquestions.json";
+		Array[] testArray = sut.getAnswersArray(file, 0);
+		assertEquals(testArray.length, 4);
 	}
 
 }
