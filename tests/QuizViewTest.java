@@ -20,8 +20,8 @@ public class QuizViewTest {
 
 	@Test
 	public void showWelcomeMsg_printWelcomeText() {
-		QuizView sut = new QuizView();
 		PrintWriter console = mock(PrintWriter.class);
+		QuizView sut = new QuizView(console);
 		
 		sut.showWelcomeMsg();
 		verify(console).println("Welcome to JavaQuiz!");
