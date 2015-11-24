@@ -18,6 +18,7 @@ public class QuizView {
 
 	public void showOptions() {
 		console.println(CATEGORY_OPTIONS);
+		console.println("What type of quiz do you want? [1] No alternatives, [2] Multiple alternatives");
 	}
 
 }
