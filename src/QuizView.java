@@ -17,8 +17,11 @@ public class QuizView {
 		console.println(WELCOME);
 	}
 
-	public void showOptions() {
+	public void showCategoryOptions() {
 		console.println(CATEGORY_OPTIONS);
+	}
+	
+	public void showQuizTypeOption(){
 		console.println(QUIZTYPE_OPTION);
 	}
 

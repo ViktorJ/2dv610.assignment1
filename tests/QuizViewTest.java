@@ -29,14 +29,14 @@ public class QuizViewTest {
 	}
 	
 	@Test
-	public void showOptions_printCategoryOptions(){
-		sut.showOptions();
+	public void showCategoryOptions_printCategoryOptions(){
+		sut.showCategoryOptions();
 		verify(console).println(QuizView.CATEGORY_OPTIONS);
 	}
 	
 	@Test
-	public void showOptions_printQuizTypeOption(){
-		sut.showOptions();
+	public void showQuizTypeOption_printQuizTypeOption(){
+		sut.showQuizTypeOption();
 		verify(console).println(QuizView.QUIZTYPE_OPTION);
 	}
 
