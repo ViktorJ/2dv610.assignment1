@@ -18,7 +18,7 @@ public class QuestionsTest {
 	@Test
 	public void getQuestion_returnFirstQuestionFromJSONFile() {
 		Questions sut = new Questions();
-		sut.getQuestion(0);
+		assertEqual(sut.getQuestion(0), "What was Zlatan Ibrahimovic first proffesional club after Malmo FF?");
 	}
 
 }
