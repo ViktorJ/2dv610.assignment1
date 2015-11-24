@@ -9,9 +9,13 @@ import org.junit.Test;
 
 
 public class QuizViewTest {
+	private PrintWriter console;
+	private QuizView sut;
 
 	@Before
 	public void setUp() throws Exception {
+		console = mock(PrintWriter.class);
+		sut = new QuizView(console);
 	}
 
 	@After
@@ -20,11 +24,8 @@ public class QuizViewTest {
 
 	@Test
 	public void showWelcomeMsg_printWelcomeText() {
-		PrintWriter console = mock(PrintWriter.class);
-		QuizView sut = new QuizView(console);
-		
 		sut.showWelcomeMsg();
-		verify(console).println("Welcome to JavaQuiz!");
+		verify(console).println(QuizView.WELCOME);
 	}
 
 }
