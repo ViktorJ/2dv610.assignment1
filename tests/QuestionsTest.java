@@ -31,9 +31,9 @@ public class QuestionsTest {
 	}
 	
 	@Test
-	public void getCorrectAnswer_returnCorrectAnswerFromFirstQuestion(){
+	public void getCorrectAnswer_returnCorrectAnswerFromFirstQuestion() throws FileNotFoundException{
 		String file = "sportquestions.json";
-		assertEquals(sut.getCorrectAnswer(0), "Ajax");
+		assertEquals(sut.getCorrectAnswer(file, 0), "Ajax");
 	}
 
 }
