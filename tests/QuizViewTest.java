@@ -77,5 +77,13 @@ public class QuizViewTest {
 		sut.showResults(num);
 		verify(console).println(msg);
 	}
+	
+	@Test
+	public void showResults_shouldPrintMessageOnTen(){
+		int num = 10;
+		String msg = "You got " + num + " points. Thats fantastic! You Rock!";
+		sut.showResults(num);
+		verify(console).println(msg);
+	}
 
 }
