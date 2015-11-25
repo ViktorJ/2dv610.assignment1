@@ -56,5 +56,16 @@ public class QuizViewTest {
 		sut.showResults(num);
 		verify(console).println(msg);
 	}
+	
+	@Test
+	public void showResults_shouldPrintMessageOnFourToSix(){
+		int num = 4;
+		String msg = "You got " + num + " points. Ok, but not more.";
+		sut.showResults(num);
+		verify(console).println(msg);
+		num = 6;
+		sut.showResults(num);
+		verify(console).println(msg);
+	}
 
 }
