@@ -28,15 +28,15 @@ public class QuizView {
 	public void showResults(int score) {
 		String msg = "";
 		if(score == 0){
-			msg = "You got 0 points. Shame on you!";
+			msg = "Shame on you!";
 		} else if(score >= 1 && score <= 3){
-			msg = "You got " + score + " points. Not very good...";
+			msg = "Not very good...";
 		} else if(score >= 4 && score <= 6){
-			msg = "You got " + score + " points. Ok, but not more.";
+			msg = "Ok, but not more.";
 		} else if(score >= 7 && score <= 9){
-			msg = "You got " + score + " points. Thats a real good score!";
+			msg = "Thats a real good score!";
 		}
-		console.println(msg);
+		console.println("You got " + score + " points. " + msg);
 	}
 
 }
