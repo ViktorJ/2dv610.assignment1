@@ -44,10 +44,7 @@ public class QuestionsTest {
 	
 	@Test
 	public void getAnswersArray_getCorrectAnswerToFirstQuestionFromAnswerArray() throws FileNotFoundException{
-		String[] testArray = sut.getAnswersArray(file, 0);
-		Object correctAnswer = sut.getCorrectAnswer(file, 0);
-		
-		assertEquals(testArray[0], correctAnswer);
+		assertEquals(sut.getAnswersArray(file, 0)[0], sut.getCorrectAnswer(file, 0));
 	}
 
 }

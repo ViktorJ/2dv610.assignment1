@@ -39,5 +39,11 @@ public class QuizViewTest {
 		sut.showQuizTypeOption();
 		verify(console).println(QuizView.QUIZTYPE_OPTION);
 	}
+	
+	@Test
+	public void showResults_shouldPrintMessageOnZero(){
+		sut.showResults(0);
+		verify(console).println("You got 0 points. Shame on you!");
+	}
 
 }
