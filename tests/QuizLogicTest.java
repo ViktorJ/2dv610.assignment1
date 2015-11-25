@@ -64,6 +64,13 @@ public class QuizLogicTest {
 	}
 	
 	@Test
+	public void gameLoop_ShouldPrintGameTypeOption(){
+		QuizView view = mock(QuizView.class);
+		sut.gameLoop();
+		verify(view).showQuizTypeOption();
+	}
+	
+	@Test
 	public void getScore_returnScoreWithValueZero(){
 		assertEquals(sut.getScore(), 0);
 	}
