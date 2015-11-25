@@ -31,8 +31,10 @@ public class QuizView {
 			msg = "You got 0 points. Shame on you!";
 		} else if(score >= 1 && score <= 3){
 			msg = "You got " + score + " points. Not very good...";
-		} else if(score >= 4 && score <= 7){
+		} else if(score >= 4 && score <= 6){
 			msg = "You got " + score + " points. Ok, but not more.";
+		} else if(score >= 7 && score <= 9){
+			msg = "You got " + score + " points. Thats a real good score!";
 		}
 		console.println(msg);
 	}
