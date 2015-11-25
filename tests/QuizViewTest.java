@@ -45,5 +45,13 @@ public class QuizViewTest {
 		sut.showResults(0);
 		verify(console).println("You got 0 points. Shame on you!");
 	}
+	
+	@Test
+	public void showResults_shouldPrintMessageOnOneToThree(){
+		sut.showResults(1);
+		verify(console).println("You got 1 points. Not very good...");
+		sut.showResults(3);
+		verify(console).println("You got 3 points. Not very good...");
+	}
 
 }
