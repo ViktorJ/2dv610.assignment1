@@ -35,6 +35,8 @@ public class QuizView {
 			msg = "Ok, but not more.";
 		} else if(score >= 7 && score <= 9){
 			msg = "Thats a real good score!";
+		} else if(score == 10){
+			msg = "Thats fantastic! You Rock!";
 		}
 		console.println("You got " + score + " points. " + msg);
 	}
