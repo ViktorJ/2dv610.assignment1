@@ -51,9 +51,6 @@ public class QuizViewTest {
 		String msg = "You got " + num + " points. Not very good...";
 		sut.showResults(num);
 		verify(console).println(msg);
-		num = 3;
-		sut.showResults(num);
-		verify(console).println(msg);
 	}
 	
 	@Test
@@ -62,18 +59,12 @@ public class QuizViewTest {
 		String msg = "You got " + num + " points. Ok, but not more.";
 		sut.showResults(num);
 		verify(console).println(msg);
-		num = 6;
-		sut.showResults(num);
-		verify(console).println(msg);
 	}
 	
 	@Test
 	public void showResults_shouldPrintMessageOnSevenToNine(){
 		int num = 7;
 		String msg = "You got " + num + " points. Thats a real good score!";
-		sut.showResults(num);
-		verify(console).println(msg);
-		num = 9;
 		sut.showResults(num);
 		verify(console).println(msg);
 	}
