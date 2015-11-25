@@ -1,4 +1,9 @@
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Scanner;
 
 import org.junit.After;
 import org.junit.Before;
@@ -67,6 +72,14 @@ public class QuizLogicTest {
 	public void getScore_returnScoreWithIncreasedValue(){
 		sut.increaseScore();
 		assertEquals(sut.getScore(), 1);
+	}
+	
+	@Test
+	public void readLine_shouldReturnCorrectInputFromScanner() throws IOException{
+		InputStream scan = mock(InputStream.class);
+		when(scan.read()).thenReturn(1);
+		int input = sut.readLine();
+		verify(scan).read();
 	}
 
 }
