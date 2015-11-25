@@ -3,12 +3,10 @@ import static org.mockito.Mockito.*;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Scanner;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 
 public class QuizLogicTest {
 	private QuizLogic sut;

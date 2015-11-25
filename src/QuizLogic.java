@@ -45,8 +45,7 @@ public class QuizLogic {
 	}
 
 	public int readLine() throws IOException {
-		int input = scan.read();
-		return input;
+		return scan.read();
 	}
 
 }
