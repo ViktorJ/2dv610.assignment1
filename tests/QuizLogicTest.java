@@ -3,6 +3,7 @@ import static org.mockito.Mockito.*;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 
 import org.junit.After;
 import org.junit.Before;
@@ -65,9 +66,9 @@ public class QuizLogicTest {
 	
 	@Test
 	public void gameLoop_ShouldPrintGameTypeOption(){
-		QuizView view = mock(QuizView.class);
+		PrintWriter console = mock(PrintWriter.class);
 		sut.gameLoop();
-		verify(view).showQuizTypeOption();
+		verify(console).println("What category of questions do you want? [1] Sport, [2] Movies");
 	}
 	
 	@Test

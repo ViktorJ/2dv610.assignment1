@@ -1,16 +1,21 @@
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 
 
 public class QuizLogic {
 	private int counter;
 	private int score;
 	private InputStream scan;
+	private PrintWriter console;
+	private QuizView view;
 	
 	public QuizLogic(InputStream scan){
 		counter = 0;
 		score = 0;
 		this.scan = scan;
+		console = new PrintWriter(System.out, true);
+		view = new QuizView(console);
 	}
 
 	public int getCounter() {
@@ -30,10 +35,13 @@ public class QuizLogic {
 	}
 
 	public void gameLoop() {
+		view.showQuizTypeOption();
+		
 		while(!isFinnished()){
 			increaseCounter();
 			//future logic
 		}
+		
 	}
 
 	public int getScore() {
