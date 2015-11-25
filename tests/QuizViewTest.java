@@ -48,10 +48,13 @@ public class QuizViewTest {
 	
 	@Test
 	public void showResults_shouldPrintMessageOnOneToThree(){
-		sut.showResults(1);
-		verify(console).println("You got 1 points. Not very good...");
-		sut.showResults(3);
-		verify(console).println("You got 3 points. Not very good...");
+		int num = 1;
+		String msg = "You got " + num + " points. Not very good...";
+		sut.showResults(num);
+		verify(console).println(msg);
+		num = 3;
+		sut.showResults(num);
+		verify(console).println(msg);
 	}
 
 }
