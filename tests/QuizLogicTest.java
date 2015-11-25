@@ -12,10 +12,12 @@ import org.junit.Test;
 
 public class QuizLogicTest {
 	private QuizLogic sut;
+	private InputStream scan;
 
 	@Before
 	public void setUp() throws Exception {
-		sut = new QuizLogic();
+		scan = mock(InputStream.class);
+		sut = new QuizLogic(scan);
 	}
 
 	@After
@@ -76,9 +78,9 @@ public class QuizLogicTest {
 	
 	@Test
 	public void readLine_shouldReturnCorrectInputFromScanner() throws IOException{
-		InputStream scan = mock(InputStream.class);
 		when(scan.read()).thenReturn(1);
 		int input = sut.readLine();
+		assertEquals(input, 1);
 		verify(scan).read();
 	}
 

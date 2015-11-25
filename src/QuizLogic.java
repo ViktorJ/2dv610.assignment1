@@ -1,11 +1,16 @@
+import java.io.IOException;
+import java.io.InputStream;
+
 
 public class QuizLogic {
 	private int counter;
 	private int score;
+	private InputStream scan;
 	
-	public QuizLogic(){
+	public QuizLogic(InputStream scan){
 		counter = 0;
 		score = 0;
+		this.scan = scan;
 	}
 
 	public int getCounter() {
@@ -37,6 +42,11 @@ public class QuizLogic {
 
 	public void increaseScore() {
 		score++;
+	}
+
+	public int readLine() throws IOException {
+		int input = scan.read();
+		return input;
 	}
 
 }
