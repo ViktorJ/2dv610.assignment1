@@ -25,4 +25,8 @@ public class QuizView {
 		console.println(QUIZTYPE_OPTION);
 	}
 
+	public void showResults(int i) {
+	console.println("You got 0 points. Shame on you!");
+	}
+
 }
