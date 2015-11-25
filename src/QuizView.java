@@ -26,7 +26,13 @@ public class QuizView {
 	}
 
 	public void showResults(int score) {
-	console.println("You got 0 points. Shame on you!");
+		String msg = "";
+		if(score == 0){
+			msg = "You got 0 points. Shame on you!";
+		} else if(score >= 1 && score <= 3){
+			msg = "You got " + score + " points. Not very good...";
+		}
+		console.println(msg);
 	}
 
 }
