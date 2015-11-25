@@ -66,5 +66,16 @@ public class QuizViewTest {
 		sut.showResults(num);
 		verify(console).println(msg);
 	}
+	
+	@Test
+	public void showResults_shouldPrintMessageOnSevenToNine(){
+		int num = 7;
+		String msg = "You got " + num + " points. Thats a real good score!";
+		sut.showResults(num);
+		verify(console).println(msg);
+		num = 9;
+		sut.showResults(num);
+		verify(console).println(msg);
+	}
 
 }
