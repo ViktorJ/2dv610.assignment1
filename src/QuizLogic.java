@@ -50,11 +50,7 @@ public class QuizLogic {
 	}
 
 	public boolean getAlternatives(int input) {
-		if(input == 2){
-			return true;
-		} else {
-			return false;
-		}
+		return input == 2;
 		
 	}
 
