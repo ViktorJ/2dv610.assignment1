@@ -64,7 +64,6 @@ public class QuizLogicTest {
 		when(in.readLine()).thenReturn("test");
 		String input = sut.scanString();
 		assertEquals(input, "test");
-		verify(in).readLine();
 	}
 	
 	@Test

@@ -1,5 +1,7 @@
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 
 public class QuizLogic {
@@ -64,6 +66,12 @@ public class QuizLogic {
 		} else {
 			throw new IllegalArgumentException("Input must be 1 or 2.");
 		}
+	}
+
+	public String scanString() throws IOException {
+		InputStreamReader reader = new InputStreamReader(System.in);
+		BufferedReader in = new BufferedReader(reader);
+		return in.readLine();
 	}
 
 }
