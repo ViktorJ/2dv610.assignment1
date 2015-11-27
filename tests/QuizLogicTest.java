@@ -100,6 +100,11 @@ public class QuizLogicTest {
 	public void getQuestionsCategory_shouldReturnMoviesOnInputTwo(){
 		assertEquals(sut.getQuestionsCategory(2), "moviequestions.json");
 	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void getQuestionsCategory_shouldThrowExceptionIfInputIsNotOneOrTwo(){
+		sut.getQuestionsCategory(3);
+	}
 
 	@Test
 	public void readLine_shouldReturnCorrectInputFromScanner() throws IOException{
