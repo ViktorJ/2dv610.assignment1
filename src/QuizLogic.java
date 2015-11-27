@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
 
 
 public class QuizLogic {
@@ -51,7 +50,6 @@ public class QuizLogic {
 	}
 
 	public boolean getAlternatives(int input) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
