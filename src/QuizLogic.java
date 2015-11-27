@@ -57,11 +57,13 @@ public class QuizLogic {
 	}
 
 	public String getQuestionsCategory(int input) {
+		String questions = "";
 		if(input == 1){
-			return "sportquestions.json";
+			questions = "sportquestions.json";
 		} else {
-			return "moviequestions.json";
+			questions = "moviequestions.json";
 		}
+		return questions;
 		
 	}
 
