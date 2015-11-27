@@ -61,6 +61,13 @@ public class QuizLogicTest {
 	}
 	
 	@Test
+	public void isAnswerCorrect_ShouldReturnTrueWhenAnswerIsCorrect() throws IOException{
+		when(in.readLine()).thenReturn("Ajax");
+		String input = sut.scanString();
+		assertTrue(sut.isAnswerCorrect("sportquestions.json", 0, input));
+	}
+	
+	@Test
 	public void readString_ShouldReturnCorrectStringInputFromScanner() throws IOException{
 		when(in.readLine()).thenReturn("test");
 		String input = sut.scanString();
