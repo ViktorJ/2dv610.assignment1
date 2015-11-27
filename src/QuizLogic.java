@@ -12,10 +12,12 @@ public class QuizLogic {
 	private int counter;
 	private int score;
 	private InputStream scan;
+	private Questions questions;
 	
 	public QuizLogic(InputStream scan){
 		counter = 0;
 		score = 0;
+		questions = new Questions();
 		this.scan = scan;
 	}
 
@@ -73,8 +75,7 @@ public class QuizLogic {
 	}
 	
 	public boolean isAnswerCorrect(String category, int questionNr, String answer) throws FileNotFoundException{
-		Questions question = new Questions();
-		if(answer.equals(question.getCorrectAnswer(category, questionNr))){
+		if(answer.equals(questions.getCorrectAnswer(category, questionNr))){
 			return true;
 		} else {
 			return false;
@@ -88,14 +89,11 @@ public class QuizLogic {
 	}
 
 	public String printAnswerAlternatives(String category, int questionNr) throws FileNotFoundException {
-		Questions question = new Questions();
 		List<String> aList = new ArrayList<>();
-		for(String alt : question.getAnswersArray(category, questionNr)){
+		for(String alt : questions.getAnswersArray(category, questionNr)){
 			aList.add(alt);
 		}
-		
 		Collections.shuffle(aList);
-		System.out.println(aList.toString());
 		return aList.toString();
 	}
 
