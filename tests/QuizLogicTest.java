@@ -80,6 +80,12 @@ public class QuizLogicTest {
 		int input = 1;
 		assertFalse(sut.getAlternatives(input));
 	}
+	
+	@Test
+	public void getAlternatives_ShouldReturnTrueIfInputIsTwo() throws IOException{
+		int input = 2;
+		assertTrue(sut.getAlternatives(input));
+	}
 
 	@Test
 	public void readLine_shouldReturnCorrectInputFromScanner() throws IOException{
