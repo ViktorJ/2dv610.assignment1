@@ -60,8 +60,10 @@ public class QuizLogic {
 		String questions = "";
 		if(input == 1){
 			questions = "sportquestions.json";
-		} else {
+		} else if(input == 2){
 			questions = "moviequestions.json";
+		} else {
+			throw new IllegalArgumentException("Input must be 1 or 2.");
 		}
 		return questions;
 		
