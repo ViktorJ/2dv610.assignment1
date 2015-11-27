@@ -50,7 +50,12 @@ public class QuizLogic {
 	}
 
 	public boolean getAlternatives(int input) {
-		return input == 2;
+		if(input == 1 || input == 2){
+			return input == 2;
+		} else {
+			throw new IllegalArgumentException("Input must be 1 or 2.");
+		}
+		
 	}
 
 }
