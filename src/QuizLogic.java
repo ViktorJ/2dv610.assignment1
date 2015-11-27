@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class QuizLogic {
@@ -48,9 +49,9 @@ public class QuizLogic {
 		String answer = "";
 		view.showWelcomeMsg();
 		view.showCategoryOptions();
-		category = scanInt();
+		category = scanIntWithScanner();
 		view.showQuizTypeOption();
-		alternatives = scanInt();
+		alternatives = scanIntWithScanner();
 		
 		
 		while(!isFinnished()){
@@ -77,6 +78,11 @@ public class QuizLogic {
 
 	public int scanInt() throws IOException {
 		return scan.read();
+	}
+	
+	public int scanIntWithScanner(){
+		Scanner scan = new Scanner(System.in);
+		return scan.nextInt();
 	}
 
 	public boolean getAlternatives(int input) {
