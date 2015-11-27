@@ -94,7 +94,7 @@ public class QuizLogicTest {
 	@Test
 	public void getQuestionsCategory_shouldReturnSportOnInputOne(){
 		int input = 1;
-		assertTrue(sut.getQuestionsCategory(input), "sportquestions.json");
+		assertEquals(sut.getQuestionsCategory(input), "sportquestions.json");
 	}
 
 	@Test
