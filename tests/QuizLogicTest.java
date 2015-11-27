@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -85,6 +86,12 @@ public class QuizLogicTest {
 	public void getAlternatives_ShouldReturnTrueIfInputIsTwo() throws IOException{
 		int input = 2;
 		assertTrue(sut.getAlternatives(input));
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void getAlternatives_ShouldThrowExceptionIfInputIsNotOneOrTwo() throws IOException{
+		int input = 3;
+		sut.getAlternatives(input);
 	}
 
 	@Test

@@ -51,7 +51,6 @@ public class QuizLogic {
 
 	public boolean getAlternatives(int input) {
 		return input == 2;
-		
 	}
 
 }
