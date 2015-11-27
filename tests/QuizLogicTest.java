@@ -75,6 +75,16 @@ public class QuizLogicTest {
 	}
 	
 	@Test
+	public void printAnswerAlternatives_shouldPrintAnswerAlternatives(){
+		boolean printed = false;
+		String alternatives = sut.printAnswerAlternatives("sportquestions.json", 0);
+		if(alternatives.contains("Ajax") && alternatives.contains("Milan") && alternatives.contains("Barcelona") && alternatives.contains("Juventus")){
+			printed = true;
+		}
+		assertTrue(printed);
+	}
+	
+	@Test
 	public void gameLoop_ShouldLoopUntilCounterIsTen(){
 		sut.gameLoop();
 		assertEquals(sut.getCounter(), 10);
