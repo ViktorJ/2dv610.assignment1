@@ -81,7 +81,7 @@ public class QuizLogic {
 	public String scanString() throws IOException {
 		InputStreamReader reader = new InputStreamReader(System.in);
 		BufferedReader in = new BufferedReader(reader);
-		return in.readLine();
+		return in.readLine().toLowerCase();
 	}
 
 }

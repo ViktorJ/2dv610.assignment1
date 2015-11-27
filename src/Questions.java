@@ -43,7 +43,7 @@ public class Questions {
 		
 		answer = qArray.getJSONObject(number).getString("correct");
 		
-		return answer;
+		return answer.toLowerCase();
 	}
 
 	public String[] getAnswersArray(String file, int number) throws FileNotFoundException {
