@@ -46,7 +46,7 @@ public class QuizLogic {
 		score++;
 	}
 
-	public int readLine() throws IOException {
+	public int scanInt() throws IOException {
 		return scan.read();
 	}
 
