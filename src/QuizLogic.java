@@ -57,16 +57,13 @@ public class QuizLogic {
 	}
 
 	public String getQuestionsCategory(int input) {
-		String questions = "";
 		if(input == 1){
-			questions = "sportquestions.json";
+			return "sportquestions.json";
 		} else if(input == 2){
-			questions = "moviequestions.json";
+			return "moviequestions.json";
 		} else {
 			throw new IllegalArgumentException("Input must be 1 or 2.");
 		}
-		return questions;
-		
 	}
 
 }
