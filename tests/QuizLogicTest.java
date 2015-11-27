@@ -90,6 +90,12 @@ public class QuizLogicTest {
 	public void getAlternatives_ShouldThrowExceptionIfInputIsNotOneOrTwo() throws IOException{
 		sut.getAlternatives(3);
 	}
+	
+	@Test
+	public void getQuestionsCategory_shouldReturnSportOnInputOne(){
+		int input = 1;
+		assertTrue(sut.getQuestionsCategory(input), "sportquestions.json");
+	}
 
 	@Test
 	public void readLine_shouldReturnCorrectInputFromScanner() throws IOException{
