@@ -50,4 +50,9 @@ public class QuizLogic {
 		return scan.read();
 	}
 
+	public boolean getAlternatives(int input) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

@@ -78,9 +78,9 @@ public class QuizLogicTest {
 	@Test
 	public void getAlternatives_ShouldReturnFalseIfInputIsOne() throws IOException{
 		int input = 1;
-		AssertFalse(getAlternatives(input));
+		assertFalse(sut.getAlternatives(input));
 	}
-	
+
 	@Test
 	public void readLine_shouldReturnCorrectInputFromScanner() throws IOException{
 		when(scan.read()).thenReturn(1);
