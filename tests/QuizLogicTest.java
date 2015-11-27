@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -75,7 +76,7 @@ public class QuizLogicTest {
 	}
 	
 	@Test
-	public void printAnswerAlternatives_shouldPrintAnswerAlternatives(){
+	public void printAnswerAlternatives_shouldPrintAnswerAlternatives() throws FileNotFoundException{
 		boolean printed = false;
 		String alternatives = sut.printAnswerAlternatives("sportquestions.json", 0);
 		if(alternatives.contains("Ajax") && alternatives.contains("Milan") && alternatives.contains("Barcelona") && alternatives.contains("Juventus")){

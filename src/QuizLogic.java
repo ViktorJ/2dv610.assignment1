@@ -3,6 +3,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
 public class QuizLogic {
@@ -82,6 +85,18 @@ public class QuizLogic {
 		InputStreamReader reader = new InputStreamReader(System.in);
 		BufferedReader in = new BufferedReader(reader);
 		return in.readLine().toLowerCase();
+	}
+
+	public String printAnswerAlternatives(String category, int questionNr) throws FileNotFoundException {
+		Questions question = new Questions();
+		List<String> aList = new ArrayList<>();
+		for(String alt : question.getAnswersArray(category, questionNr)){
+			aList.add(alt);
+		}
+		
+		Collections.shuffle(aList);
+		System.out.println(aList.toString());
+		return aList.toString();
 	}
 
 }
