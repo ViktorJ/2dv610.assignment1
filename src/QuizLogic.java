@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -13,11 +14,15 @@ public class QuizLogic {
 	private int score;
 	private InputStream scan;
 	private Questions questions;
+	private QuizView view;
+	private PrintWriter console;
 	
 	public QuizLogic(InputStream scan){
 		counter = 0;
 		score = 0;
+		console = new PrintWriter(System.out, true);
 		questions = new Questions();
+		view = new QuizView(console);
 		this.scan = scan;
 	}
 
@@ -37,11 +42,29 @@ public class QuizLogic {
 		return getCounter() == 10;
 	}
 
-	public void gameLoop() {
+	public void gameLoop() throws IOException {
+		int category = 0;
+		int alternatives = 0;
+		String answer = "";
+		view.showWelcomeMsg();
+		view.showCategoryOptions();
+		category = scanInt();
+		view.showQuizTypeOption();
+		alternatives = scanInt();
+		
+		
 		while(!isFinnished()){
+			console.println(questions.getQuestion(getQuestionsCategory(category), getCounter()));
+			if(getAlternatives(alternatives)){
+				console.println(printAnswerAlternatives(getQuestionsCategory(category), getCounter()));
+			}
+			answer = scanString();
+			if(isAnswerCorrect(getQuestionsCategory(category), getCounter(), answer)){
+				increaseScore();
+			}
 			increaseCounter();
-			//future logic
 		}
+		view.showResults(getScore());
 	}
 
 	public int getScore() {
@@ -85,6 +108,7 @@ public class QuizLogic {
 	public String scanString() throws IOException {
 		InputStreamReader reader = new InputStreamReader(System.in);
 		BufferedReader in = new BufferedReader(reader);
+	
 		return in.readLine().toLowerCase();
 	}
 

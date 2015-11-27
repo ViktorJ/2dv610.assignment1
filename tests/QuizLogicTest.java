@@ -85,11 +85,13 @@ public class QuizLogicTest {
 		assertTrue(printed);
 	}
 	
+	/*
 	@Test
-	public void gameLoop_ShouldLoopUntilCounterIsTen(){
+	public void gameLoop_ShouldLoopUntilCounterIsTen() throws IOException{
 		sut.gameLoop();
 		assertEquals(sut.getCounter(), 10);
 	}
+	*/
 	
 	
 	@Test
@@ -134,7 +136,7 @@ public class QuizLogicTest {
 	}
 
 	@Test
-	public void readLine_shouldReturnCorrectInputFromScanner() throws IOException{
+	public void scanInt_shouldReturnCorrectInputFromScanner() throws IOException{
 		when(scan.read()).thenReturn(1);
 		int input = sut.scanInt();
 		assertEquals(input, 1);
