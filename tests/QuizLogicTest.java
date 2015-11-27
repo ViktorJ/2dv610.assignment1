@@ -78,20 +78,17 @@ public class QuizLogicTest {
 	
 	@Test
 	public void getAlternatives_ShouldReturnFalseIfInputIsOne() throws IOException{
-		int input = 1;
-		assertFalse(sut.getAlternatives(input));
+		assertFalse(sut.getAlternatives(1));
 	}
 	
 	@Test
 	public void getAlternatives_ShouldReturnTrueIfInputIsTwo() throws IOException{
-		int input = 2;
-		assertTrue(sut.getAlternatives(input));
+		assertTrue(sut.getAlternatives(2));
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void getAlternatives_ShouldThrowExceptionIfInputIsNotOneOrTwo() throws IOException{
-		int input = 3;
-		sut.getAlternatives(input);
+		sut.getAlternatives(3);
 	}
 
 	@Test

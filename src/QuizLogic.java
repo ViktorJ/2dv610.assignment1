@@ -34,7 +34,6 @@ public class QuizLogic {
 			increaseCounter();
 			//future logic
 		}
-		
 	}
 
 	public int getScore() {
@@ -55,7 +54,6 @@ public class QuizLogic {
 		} else {
 			throw new IllegalArgumentException("Input must be 1 or 2.");
 		}
-		
 	}
 
 }
