@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -55,6 +56,15 @@ public class QuizLogicTest {
 			sut.increaseCounter();
 		}
 		assertFalse(sut.isFinnished());
+	}
+	
+	@Test
+	public void readString_ShouldReturnCorrectStringInputFromScanner() throws IOException{
+	    BufferedReader in = mock(BufferedReader.class);
+		when(in.readLine()).thenReturn("test");
+		String input = sut.scanString();
+		assertEquals(input, "test");
+		verify(in).readLine();
 	}
 	
 	@Test
