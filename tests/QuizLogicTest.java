@@ -95,6 +95,11 @@ public class QuizLogicTest {
 	public void getQuestionsCategory_shouldReturnSportOnInputOne(){
 		assertEquals(sut.getQuestionsCategory(1), "sportquestions.json");
 	}
+	
+	@Test
+	public void getQuestionsCategory_shouldReturnMoviesOnInputTwo(){
+		assertEquals(sut.getQuestionsCategory(2), "moviequestions.json");
+	}
 
 	@Test
 	public void readLine_shouldReturnCorrectInputFromScanner() throws IOException{
